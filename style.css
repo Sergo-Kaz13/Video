@@ -25,11 +25,23 @@ body {
 }
 
 .preloader {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.5s;
+  visibility: visible;
+  z-index: 999;
+}
+
+.preloader-hidden {
+  z-index: -999;
+  visibility: hidden;
 }
 
 .video-container {
@@ -39,13 +51,14 @@ body {
   top: 0;
   left: 0;
   object-fit: cover;
-  z-index: -999;
+  z-index: -100;
 }
 
 .video-title {
   color: #fff;
   text-transform: capitalize;
   font-size: 64px;
+  text-align: center;
 }
 
 .control-btn {

@@ -13,3 +13,9 @@ controlBtn.addEventListener("click", () => {
 
   play = !play;
 });
+
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => {
+  preloader.classList.add("preloader-hidden");
+});
